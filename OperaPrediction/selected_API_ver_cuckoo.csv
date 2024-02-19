@@ -1,0 +1,162 @@
+category,c_mist,api function name,a_mist,arguments_name
+file,1,NtCreateFile,1,"create_disposition, filepath, file_attributes"
+file,1,NtOpenFile,2,"file_handle, filepath"
+file,1,NtReadFile,3,file_handle
+file,1,CopyFileA,4,"oldfilepath, newfilepath"
+file,1,CopyFileExW,4,"oldfilepath, newfilepath"
+file,1,CopyFileW,4,"oldfilepath, newfilepath"
+file,1,NtWriteFile,5,filepath
+file,1,GetFileAttributesExW,6,filepath
+file,1,GetFileAttributesW,6,"file_attributes, filepath"
+file,1,SetFileAttributesW,7,"file_attributes, filepath"
+file,1,DeleteFileA,8,filepath
+file,1,DeleteFileW,8,filepath
+file,1,NtDeleteFile,8,filepath
+file,1,CreateDirectoryW,9,dirpath
+file,1,GetSystemDirectoryA,a,dirpath
+file,1,GetSystemDirectoryW,a,dirpath
+file,1,GetSystemWindowsDirectoryA,b,dirpath
+file,1,GetSystemWindowsDirectoryW,b,dirpath
+file,1,RemoveDirectoryA,c,dirpath
+file,1,RemoveDirectoryW,c,dirpath
+file,1,FindFirstFileExA,d,filepath
+file,1,FindFirstFileExW,d,filepath
+file,1,NtQueryDirectoryFile,e,dirpath
+services,2,CreateServiceA,1,"display_name, service_name, filepath"
+services,2,CreateServiceW,1,"display_name, service_name, filepath"
+services,2,OpenServiceA,2,"service_handle, service_name"
+services,2,OpenServiceW,2,"service_handle, service_name"
+services,2,StartServiceA,3,service_name
+services,2,StartServiceW,3,service_name
+services,2,DeleteService,4,service_name
+services,2,ControlService,5,"service_handle, service_name, control_code"
+system,3,LdrLoadDll,1,"module_address, module_name"
+system,3,LdrGetDllHandle,2,"module_name, module_address"
+system,3,LdrGetProcedureAddress,3,"module, function_name"
+system,3,SetWindowsHookExA,4,"module_address, hook_identifier"
+system,3,SetWindowsHookExW,4,"module_address, hook_identifier"
+system,3,NtQuerySystemInformation,5,information_class
+system,3,GetUserNameA,6,username
+system,3,GetUserNameW,6,username
+system,3,GetComputerNameA,7,computer_name
+system,3,GetComputerNameW,7,computer_name
+system,3,GetDiskFreeSpaceExW,8,root_path
+system,3,NtCreateMutant,9,mutant_name
+process,4,AssignProcessToJobObject,1,job_handle
+process,4,CreateJobObjectW,2,job_handle
+process,4,CreateProcessInternalW,3,"filepath, command_line, creation_flags"
+process,4,ShellExecuteExW,4,"parameters, filepath, show_type"
+process,4,CreateRemoteThread,5,"thread_identifier, process_identifier, parameter"
+process,4,CreateThread,6,"thread_identifier, parameter"
+process,4,CreateToolhelp32Snapshot,7,process_identifier
+process,4,Module32FirstW,8,snapshot_handle
+process,4,Module32NextW,9,snapshot_handle
+process,4,NtAllocateVirtualMemory,a,"protection, process_identifier"
+process,4,NtCreateProcessEx,b,filepath
+process,4,NtCreateSection,c,desired_access
+process,4,NtCreateThread,d,"thread_handle, access, process_handle"
+process,4,NtCreateThreadEx,d,"thread_handle, access, process_handle"
+process,4,NtFreeVirtualMemory,e,"free_type, size, process_handle"
+process,4,NtGetContextThread,f,thread_handle
+process,4,NtMapViewOfSection,11,"section_handle, win32_protect, view_size"
+process,4,NtOpenProcess,12,"desired_access, process_identifier, process_handle"
+process,4,NtOpenSection,13,"section_handle, section_name, desired_access"
+process,4,NtOpenThread,14,"thread_handle, process_identifier, access"
+process,4,NtProtectVirtualMemory,15,"stack_dep_bypass, stack_pivoted, heap_dep_bypass"
+process,4,NtQueueApcThread,16,"thread_handle, process_identifier"
+process,4,NtReadVirtualMemory,17,"base_address, process_handle"
+process,4,NtResumeThread,18,"thread_handle, suspend_count"
+process,4,NtSetContextThread,19,thread_handle
+process,4,NtSuspendThread,1a,"thread_handle, previous_suspend_count"
+process,4,NtTerminateProcess,1b,"status_code, process_identifier, process_handle"
+process,4,NtTerminateThread,1c,"thread_handle, status_code"
+process,4,NtUnmapViewOfSection,1d,"process_identifier, region_size, process_handle"
+process,4,NtWriteVirtualMemory,1e,"process_identifier, process_handle"
+process,4,ReadProcessMemory,1f,"base_address, process_handle"
+process,4,Process32FirstW,21,"process_name, process_identifier"
+process,4,Process32NextW,22,"process_name, process_identifier"
+process,4,RtlCreateUserThread,23,"thread_handle, suspended, parameter"
+process,4,WriteProcessMemory,24,"process_handle, process_identifier"
+process,4,Thread32First,25,snapshot_handle
+process,4,Thread32Next,26,snapshot_handle
+process,4,IWbemServices_ExecQuery,27,query
+process,4,IWbemServices_ExecQueryAsync,27,query
+process,4,IWbemServices_ExecMethod,28,"method, class"
+process,4,IWbemServices_ExecMethodAsync,28,"method, class"
+process,4,vbe6_Shell,29,command_line
+process,4,vbe6_CreateObject,2a,object_name
+process,4,vbe6_GetObject,2b,object_name
+registry,5,NtCreateKey,1,regkey
+registry,5,RegCreateKeyExA,2,regkey
+registry,5,RegCreateKeyExW,2,regkey
+registry,5,NtOpenKey,3,regkey
+registry,5,NtOpenKeyEx,3,regkey
+registry,5,RegOpenKeyExA,4,regkey
+registry,5,RegOpenKeyExW,4,regkey
+registry,5,NtQueryKey,5,regkey
+registry,5,NtQueryMultipleValueKey,6,regkey
+registry,5,NtQueryValueKey,7,"value, regkey"
+registry,5,RegQueryInfoKeyA,8,regkey
+registry,5,RegQueryInfoKeyW,8,regkey
+registry,5,RegQueryValueExA,9,"value, regkey"
+registry,5,RegQueryValueExW,9,"value, regkey"
+registry,5,NtEnumerateKey,a,regkey
+registry,5,NtEnumerateValueKey,b,"value, regkey"
+registry,5,RegEnumKeyExA,c,regkey
+registry,5,RegEnumKeyExW,c,regkey
+registry,5,RegEnumKeyW,c,regkey
+registry,5,RegEnumValueA,d,"value, regkey"
+registry,5,RegEnumValueW,d,"value, regkey"
+registry,5,RegSetValueExA,e,"value, regkey"
+registry,5,RegSetValueExW,e,"value, regkey"
+registry,5,NtSetValueKey,f,"value, regkey"
+registry,5,NtDeleteKey,11,regkey
+registry,5,NtDeleteValueKey,12,regkey
+registry,5,RegDeleteKeyA,13,regkey
+registry,5,RegDeleteKeyW,13,regkey
+registry,5,RegDeleteValueA,14,regkey
+registry,5,RegDeleteValueW,14,regkey
+registry,5,NtSaveKey,15,"filepath, regkey"
+registry,5,NtSaveKeyEx,15,"filepath, regkey"
+network,6,DnsQuery_A,1,hostname
+network,6,DnsQuery_UTF8,1,hostname
+network,6,DnsQuery_W,1,hostname
+network,6,GetAddrInfoW,2,hostname
+network,6,getaddrinfo,2,hostname
+network,6,gethostbyname,3,hostname
+network,6,URLDownloadToFileW,4,"filepath, url"
+network,6,socket,5,"protocol, socket"
+network,6,accept,6,"ip_address, socket, port"
+network,6,connect,7,"ip_address, socket, port"
+network,6,recv,8,"socket, buffer"
+network,6,send,9,"socket, buffer"
+network,6,recvfrom,a,"ip_address, socket, port"
+network,6,sendto,b,"ip_address, socket, port"
+network,6,listen,c,socket
+network,6,select,d,socket
+network,6,bind,e,"ip_address, socket, port"
+network,6,closesocket,f,socket
+network,6,shutdown,11,socket
+network,6,getsockname,12,"ip_address, s, port"
+network,6,WSAAccept,13,"socket, ip_address, port"
+network,6,WSAConnect,14,"ip_address, s, port"
+network,6,WSARecv,15,socket
+network,6,WSARecvFrom,16,"socket, ip_address, port"
+network,6,WSASend,17,socket
+network,6,WSASendTo,18,"socket, ip_address, port"
+network,6,WSASocketA,19,"protocol, socket"
+network,6,WSASocketW,19,"protocol, socket"
+network,6,InternetConnectA,1a,"service, hostname, port"
+network,6,InternetConnectW,1a,"service, hostname, port"
+network,6,InternetOpenUrlA,1b,url
+network,6,InternetOpenUrlW,1b,url
+network,6,InternetCrackUrlA,1c,url
+network,6,InternetCrackUrlW,1c,url
+network,6,InternetOpenA,1d,"proxy_name, user_agent"
+network,6,InternetOpenW,1d,"proxy_name, user_agent"
+network,6,HttpOpenRequestA,1e,"http_method, path"
+network,6,HttpOpenRequestW,1e,"http_method, path"
+ui,7,FindWindowA,1,"class_name, window_name"
+ui,7,FindWindowW,1,"class_name, window_name"
+ui,7,FindWindowExA,2,"class_name, window_name"
+ui,7,FindWindowExW,2,"class_name, window_name"
